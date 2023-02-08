@@ -1,8 +1,9 @@
-# Feedback widget
-An individual project for collecting feedback from customers.
+# Phonebook App
+Individual project for saving customers contacts.
 
-Created a simple application for collecting statistics.
-(Practical skills in creating React components, monitoring of events and states).
+Phonebook application consists of a form and a list of contacts.
+Adding a contact name and displaying a list of contacts has been implemented. 
+The application does not save contacts between different sessions (page reloading).
 
 This project was created with the help of
 [Create React App](https://github.com/facebook/create-react-app).
