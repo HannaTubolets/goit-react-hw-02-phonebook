@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import css from './ContactForm.module.css';
 
@@ -13,10 +14,22 @@ export class ContactForm extends Component {
     this.setState({ [name]: value });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    // const form = event.currentTarget;
+    this.props.handleSubmit(this.state);
+    this.formReset();
+  };
+
+  formReset = () => {
+    this.setState({ name: '', number: '' });
+  };
+
   render() {
+    // const { name, number } = this.state;
     return (
       <>
-        <form className={css.form}>
+        <form onSubmit={this.handleSubmit} className={css.form}>
           <label className={css.label}>Name</label>
           <input
             className={css.name}
@@ -25,8 +38,11 @@ export class ContactForm extends Component {
             name="name"
             value={this.state.name}
             placeholder="Enter your name"
-            autofocus="on"
+            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             autocomplete="off"
+            required
+            autofocus="on"
           />
 
           <label className={css.label}>Number</label>
@@ -39,7 +55,6 @@ export class ContactForm extends Component {
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             placeholder="Enter your number"
-            autofocus="on"
             autocomplete="off"
             required
           />
@@ -51,3 +66,10 @@ export class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.number.isRequired,
+  inputChange: PropTypes.func,
+};
