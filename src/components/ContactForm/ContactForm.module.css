@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name,
+.phone {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem auto;
+  margin-bottom: 16px;
+  align-items: center;
+  font-size: large;
+  text-align: left;
+  border-radius: 4px;
+  padding: 0.5rem 15rem 0.5rem 1rem;
+}
+
+.lable {
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-top: 32px;
+  margin-bottom: 50px;
+  background-color: #1380ff;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  flex-grow: 1;
+  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  height: 36px;
+  line-height: 20px;
+  min-width: 185px;
+  padding: 0 16px 0 16px;
+  color: white;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  background-color: #3190fc;
+}
