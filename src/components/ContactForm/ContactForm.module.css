@@ -21,8 +21,8 @@
 }
 
 .btn {
-  margin-top: 32px;
-  margin-bottom: 50px;
+  margin-top: 16px;
+  margin-bottom: 40px;
   background-color: #1380ff;
   border: none;
   border-radius: 4px;
@@ -41,5 +41,5 @@
 }
 
 .btn:hover {
-  background-color: #3190fc;
+  background-color: #4c9ffd;
 }

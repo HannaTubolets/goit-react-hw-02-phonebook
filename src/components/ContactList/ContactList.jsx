@@ -8,7 +8,8 @@ export const ContactList = ({ contacts, handleDelete }) => {
         <ul className={css.contactList}>
           {contacts.map((contact, id) => (
             <li key={id} className={css.contactItem}>
-              {contact.name}:{contact.number}
+              <span>{contact.name}:</span>
+              <span>{contact.number}</span>
               <button
                 type="button"
                 className={css.btnItemDel}
@@ -19,6 +20,21 @@ export const ContactList = ({ contacts, handleDelete }) => {
             </li>
           ))}
         </ul>
+
+        {/* <ul className={css.contactList}>
+          {contacts.map((contact, id) => (
+            <li key={id} className={css.contactItem}>
+              {contact.name}:{contact.number}
+              <button
+                type="button"
+                className={css.btnItemDel}
+                onClick={() => handleDelete(contact.id)}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul> */}
       </div>
     </>
   );
