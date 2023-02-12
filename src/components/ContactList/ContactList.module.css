@@ -1,11 +1,27 @@
-.contactList {
-  font-size: 16px;
-}
-
 .contactItem {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .btnItemDel {
+  margin-top: 24px;
+  background-color: #fce357;
+  border: none;
+  border-radius: 4px;
+  color: #010101;
+  flex-grow: 1;
   font-size: 16px;
+  height: 36px;
+  line-height: 20px;
+  min-width: 88px;
+  padding: 0 16px 0 16px;
+  margin-left: 24px;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnItemDel:hover {
+  background-color: #fcc257;
 }

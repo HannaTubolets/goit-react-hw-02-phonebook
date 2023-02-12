@@ -5,13 +5,10 @@
   align-items: center;
   font-size: large;
   text-align: left;
+  border-radius: 4px;
   padding: 0.5rem 15rem 0.5rem 1rem;
 }
 
 .filterLabel {
   margin-bottom: 10px;
 }
-
-/* .filterWrapper {
-    
-} */

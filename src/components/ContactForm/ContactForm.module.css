@@ -25,16 +25,14 @@
   margin-bottom: 50px;
   background-color: #1380ff;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   color: #fff;
   flex-grow: 1;
-  font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   height: 36px;
   line-height: 20px;
   min-width: 185px;
   padding: 0 16px 0 16px;
-  color: white;
   cursor: pointer;
 
   transition-property: background-color;

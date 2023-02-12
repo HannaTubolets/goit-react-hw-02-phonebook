@@ -4,7 +4,6 @@ import css from './ContactForm.module.css';
 
 export class ContactForm extends Component {
   state = {
-    contacts: [],
     name: '',
     number: '',
   };
@@ -16,14 +15,17 @@ export class ContactForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    // const form = event.currentTarget;
+    //  this.props.handleSubmit(this.state);
+    //   this.formReset();
+
+    const form = event.currentTarget;
     this.props.handleSubmit(this.state);
-    this.formReset();
+    form.reset();
   };
 
-  formReset = () => {
-    this.setState({ name: '', number: '' });
-  };
+  //   formReset = () => {
+  //     this.setState({ name: '', number: '' });
+  //   };
 
   render() {
     // const { name, number } = this.state;
