@@ -8,8 +8,8 @@ export const ContactList = ({ contacts, handleDelete }) => {
         <ul className={css.contactList}>
           {contacts.map((contact, id) => (
             <li key={id} className={css.contactItem}>
-              <span>{contact.name}:</span>
-              <span>{contact.number}</span>
+              <span className={css.contactInfo}>{contact.name}:</span>
+              <span className={css.contactInfo}>{contact.number}</span>
               <button
                 type="button"
                 className={css.btnItemDel}
@@ -20,21 +20,6 @@ export const ContactList = ({ contacts, handleDelete }) => {
             </li>
           ))}
         </ul>
-
-        {/* <ul className={css.contactList}>
-          {contacts.map((contact, id) => (
-            <li key={id} className={css.contactItem}>
-              {contact.name}:{contact.number}
-              <button
-                type="button"
-                className={css.btnItemDel}
-                onClick={() => handleDelete(contact.id)}
-              >
-                Delete
-              </button>
-            </li>
-          ))}
-        </ul> */}
       </div>
     </>
   );
@@ -45,7 +30,7 @@ ContactList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      number: PropTypes.number.isRequired,
+      number: PropTypes.string.isRequired,
     })
   ),
   handleDelete: PropTypes.func,

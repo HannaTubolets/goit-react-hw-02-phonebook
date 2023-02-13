@@ -3,8 +3,8 @@
   flex-direction: column;
 }
 
-.name,
-.phone {
+.formName,
+.formNumber {
   display: flex;
   flex-direction: column;
   margin: 0.5rem auto;
@@ -16,11 +16,11 @@
   padding: 0.5rem 15rem 0.5rem 1rem;
 }
 
-.lable {
+.ormLable {
   margin-bottom: 10px;
 }
 
-.btn {
+.formBtn {
   margin-top: 16px;
   margin-bottom: 40px;
   background-color: #1380ff;
@@ -31,7 +31,7 @@
   font-size: 16px;
   height: 36px;
   line-height: 20px;
-  min-width: 185px;
+  width: 185px;
   padding: 0 16px 0 16px;
   cursor: pointer;
 
@@ -40,6 +40,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover {
-  background-color: #4c9ffd;
+.formBtn:hover {
+  background-color: #3f96fa;
 }
