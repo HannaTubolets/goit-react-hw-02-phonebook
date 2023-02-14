@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Filter.module.css';
 
-export const Filter = ({ filter, handleInputChange }) => {
+export const Filter = ({ filter, onFilter }) => {
   return (
     <div>
       <label className={css.filterLabel}>Find contacts by Name</label>
@@ -11,7 +11,7 @@ export const Filter = ({ filter, handleInputChange }) => {
         name="filter"
         placeholder="Enter filter"
         value={filter}
-        onChange={handleInputChange}
+        onChange={onFilter}
       />
     </div>
   );
@@ -19,5 +19,5 @@ export const Filter = ({ filter, handleInputChange }) => {
 
 Filter.propTypes = {
   filter: PropTypes.string.isRequired,
-  handleInputChange: PropTypes.func,
+  onFilter: PropTypes.func,
 };

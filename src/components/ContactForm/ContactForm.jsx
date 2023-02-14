@@ -21,6 +21,7 @@ export class ContactForm extends Component {
   onAddContact = event => {
     event.preventDefault();
     this.props.onAddContact(this.state);
+
     this.formReset();
   };
 
